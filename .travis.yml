@@ -6,4 +6,4 @@ before_install:
   - docker build -t sameerapl18/react-docker -f Dockerfile.dev .
 
 script:
-  - docker run sameerapl18/react-docker npm run test -- --coverage
+  - docker run -e CI=true sameerapl18/react-docker npm run test
